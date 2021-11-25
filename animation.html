@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height:100px;
+            background-color: red;
+            animation-name:example;
+            animation-duration:4s;
+        }
+        @keyframes example {
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: yellow;
+            }
+        }
+    </style>
 </head>
 <body>
 
+<p><b>注释：</b>本例在 Internet Explorer 9 以及更早的版本中无效。</p>
+
+<div></div>
+
+<p><b>注释：</b>当动画结束后，会变回最初的样式。</p>
 </body>
 </html>
