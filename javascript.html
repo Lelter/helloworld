@@ -1,34 +1,22 @@
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <script>
-        function myFun() {
-            document.getElementById("shenhe").innerHTML = b;
-        }
-    </script>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-<h1 id="ganyu" onmousemove="displayDate()">甘雨</h1>
-<p id="shenhe"></p>
-<p id ="demo"></p>
-<button type="button" onclick="thisFun()">have a try</button>
+<h1 id="demo"></h1>
 
 <script>
-    let firstName = "Bill";
-    let lastName = "Gates";
-    var a = `Welcome ${firstName} ${lastName}!`;
-    var b = [1, 2, 3, 4, 5];
+    setInterval(displayTime, 1000);
 
-    function thisFun() {
-        b.sort(function () {
-            return 0.5 - Math.random();
-        });
-        document.getElementById("shenhe").innerHTML=b;
-
+    function displayTime() {
+        let d = new Date();
+        document.getElementById("demo").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
     }
-    var d =new Date();
-    document.getElementById("demo").innerHTML=d.getSeconds();
-
 </script>
 </body>
 </html>
